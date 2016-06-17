@@ -1,7 +1,7 @@
 babel-plugin-ko-component
 =====
 
-Transpile knockout component written in <abbr title="Common Component Module">**CCM**</abbr> to <abbr title="Runtime Component Module">**RCM**</abbr>.
+Transpile knockout component written in **Common Component Module** to **Runtime Component Module**.
 
 ## Installation
 
