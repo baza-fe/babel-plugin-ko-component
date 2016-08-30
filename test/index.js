@@ -7,8 +7,9 @@ import plugin from '../';
 const fixturesDir = join(__dirname, 'fixtures');
 
 function sanitize(code) {
-    return code.replace(/^\s+|\s+$/, '')
-               .replace(/\r|\n/g, '');
+    return code
+        .replace(/^\s+|\s+$/, '')
+        .replace(/\r|\n/g, '');
 }
 
 readdirSync(fixturesDir).map((caseName) => {
