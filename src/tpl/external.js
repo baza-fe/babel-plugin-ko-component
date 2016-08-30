@@ -1,4 +1,6 @@
-// NAME: external property name
+// template params:
+//
+// - NAME external property name
 
 import template from 'babel-template';
 

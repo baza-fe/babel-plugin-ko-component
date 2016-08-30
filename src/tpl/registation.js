@@ -1,5 +1,7 @@
-// NAME: component name
-// EXPORT: component export value
+// template params:
+//
+// - NAME component name
+// - EXPORT component export value
 
 import template from 'babel-template';
 
