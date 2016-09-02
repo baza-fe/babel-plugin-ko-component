@@ -6,7 +6,7 @@ var template = _interopDefault(require('babel-template'));
 
 var externalTpl = template('\n    const EXTERNAL_NAME = \'\';\n');
 
-var registationTpl = template('\n    const EXPORT_NAME = EXPORT_VALUE;\n\n    EXPORT_NAME.name = EXPORT_NAME.name || EXTERNAL_LABEL_NAME;\n    EXPORT_NAME.style = EXPORT_NAME.style || EXTERNAL_STYLE_NAME;\n    EXPORT_NAME.template = EXPORT_NAME.template || EXTERNAL_TEMPLATE_NAME;\n\n    ko.components.register(EXPORT_NAME.name, EXPORT_NAME);\n');
+var registationTpl = template('\n    const EXPORT_NAME = EXPORT_VALUE;\n\n    EXPORT_NAME.name = EXPORT_NAME.name || EXTERNAL_LABEL_NAME;\n    EXPORT_NAME.style = EXPORT_NAME.style || EXTERNAL_STYLE_NAME;\n    EXPORT_NAME.template = EXPORT_NAME.template || EXTERNAL_TEMPLATE_NAME;\n\n    ko.components.register(EXPORT_NAME);\n');
 
 var EXPORT_NAME = '__ko_component__';
 var EXTERNAL_LABEL_NAME = '__ko_component_label__';

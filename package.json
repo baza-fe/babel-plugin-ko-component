@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-ko-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Transpiler for knockout component.",
   "main": "dist/babel-plugin-ko-component.cjs.js",
   "jsnext:main": "dist/babel-plugin-ko-component.es6.js",
