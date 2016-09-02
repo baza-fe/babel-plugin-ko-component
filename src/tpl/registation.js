@@ -12,5 +12,5 @@ export default template(`
     EXPORT_NAME.style = EXPORT_NAME.style || EXTERNAL_STYLE_NAME;
     EXPORT_NAME.template = EXPORT_NAME.template || EXTERNAL_TEMPLATE_NAME;
 
-    ko.components.register(EXPORT_NAME.name, EXPORT_NAME);
+    ko.components.register(EXPORT_NAME);
 `);
