@@ -6,7 +6,7 @@ Transpile knockout component written in **Standard Component Module** to **Trans
 ## Installation
 
 ```bash
-npm install --save-dev babel-plugin-ko-component
+$ npm install --save-dev babel-plugin-ko-component
 ```
 
 ## Usage
