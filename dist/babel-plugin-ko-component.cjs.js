@@ -4,7 +4,16 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var template = _interopDefault(require('babel-template'));
 
+// template params:
+//
+// - NAME external property name
+
 var externalTpl = template('\n    const EXTERNAL_NAME = \'\';\n');
+
+// template params:
+//
+// - NAME component name
+// - EXPORT component export value
 
 var registationTpl = template('\n    const EXPORT_NAME = EXPORT_VALUE;\n\n    EXPORT_NAME.name = EXPORT_NAME.name || EXTERNAL_LABEL_NAME;\n    EXPORT_NAME.style = EXPORT_NAME.style || EXTERNAL_STYLE_NAME;\n    EXPORT_NAME.template = EXPORT_NAME.template || EXTERNAL_TEMPLATE_NAME;\n\n    ko.components.register(EXPORT_NAME);\n');
 
