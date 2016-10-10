@@ -1,10 +1,11 @@
 const rollup = require('rollup').rollup;
+const babelrc = require('babelrc-rollup').default;
 const babel = require('rollup-plugin-babel');
 
 rollup({
     entry: 'src/index.js',
     plugins: [
-        babel()
+        babel(babelrc())
     ],
     external: [
         'babel-template'
@@ -16,7 +17,7 @@ rollup({
     });
 
     bundle.write({
-        dest: 'dist/babel-plugin-ko-component.es6.js',
-        format: 'es6'
+        dest: 'dist/babel-plugin-ko-component.es.js',
+        format: 'es'
     });
 }).catch(console.error);
