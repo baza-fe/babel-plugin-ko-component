@@ -8,22 +8,22 @@ var template = _interopDefault(require('babel-template'));
 //
 // - NAME external property name
 
-var externalTpl = template('\n    const EXTERNAL_NAME = \'\';\n');
+var externalTpl = template("\n    const EXTERNAL_NAME = '';\n");
 
 // template params:
 //
 // - NAME component name
 // - EXPORT component export value
 
-var registationTpl = template('\n    const EXPORT_NAME = EXPORT_VALUE;\n\n    EXPORT_NAME.name = EXPORT_NAME.name || EXTERNAL_LABEL_NAME;\n    EXPORT_NAME.style = EXPORT_NAME.style || EXTERNAL_STYLE_NAME;\n    EXPORT_NAME.template = EXPORT_NAME.template || EXTERNAL_TEMPLATE_NAME;\n\n    ko.components.register(EXPORT_NAME);\n');
+var registationTpl = template("\n    const EXPORT_NAME = EXPORT_VALUE;\n\n    EXPORT_NAME.name = EXPORT_NAME.name || EXTERNAL_LABEL_NAME;\n    EXPORT_NAME.style = EXPORT_NAME.style || EXTERNAL_STYLE_NAME;\n    EXPORT_NAME.template = EXPORT_NAME.template || EXTERNAL_TEMPLATE_NAME;\n\n    ko.components.register(EXPORT_NAME);\n");
 
 var EXPORT_NAME = '__ko_component__';
 var EXTERNAL_LABEL_NAME = '__ko_component_label__';
 var EXTERNAL_STYLE_NAME = '__ko_component_style__';
 var EXTERNAL_TEMPLATE_NAME = '__ko_component_template__';
 
-function transpile(_ref) {
-    var t = _ref.types;
+function transpile(ref) {
+    var t = ref.types;
 
     var hasExternalLabelDeclaration = false;
     var hasExternalStyleDeclaration = false;
@@ -56,7 +56,7 @@ function transpile(_ref) {
     return {
         visitor: {
             VariableDeclaration: {
-                enter: function enter(path) {
+                enter: function enter$1(path) {
                     if (path.parentPath.type === 'Program') {
                         path.traverse(variableDeclaratorVisitor);
                     }

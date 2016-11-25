@@ -1,23 +1,17 @@
 const rollup = require('rollup').rollup;
-const babelrc = require('babelrc-rollup').default;
-const babel = require('rollup-plugin-babel');
+const buble = require('rollup-plugin-buble');
 
 rollup({
     entry: 'src/index.js',
     plugins: [
-        babel(babelrc())
+        buble()
     ],
     external: [
         'babel-template'
     ]
 }).then(bundle => {
     bundle.write({
-        dest: 'dist/babel-plugin-ko-component.cjs.js',
+        dest: 'dest/babel-plugin-ko-component.js',
         format: 'cjs'
-    });
-
-    bundle.write({
-        dest: 'dist/babel-plugin-ko-component.es.js',
-        format: 'es'
     });
 }).catch(console.error);
